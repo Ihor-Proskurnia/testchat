@@ -10,7 +10,6 @@ app.config.from_object('config.Config')
 CORS(app, resources={r"/*": {"origins": "http://localhost:8081"}})
 jwt = JWTManager(app)
 
-# Register blueprints
 app.register_blueprint(auth_bp)
 app.register_blueprint(messages_bp)
 app.register_blueprint(users_bp)
